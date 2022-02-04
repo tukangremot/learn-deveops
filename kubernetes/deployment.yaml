@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: research-activity-log-go-deployment
+  namespace: default
+  labels:
+    app: research-activity-log-go
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: research-activity-log-go
+  template:
+    metadata:
+      labels:
+        app: research-activity-log-go
+    spec:
+      containers:
+      - name: research-activity-log-go
+        image: tukangremot/research-activity-log-go:0.0.1
+        ports:
+        - containerPort: 3333

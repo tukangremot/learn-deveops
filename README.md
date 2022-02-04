@@ -1,1 +1,1 @@
-# learn-deveops
+# learn-devops
